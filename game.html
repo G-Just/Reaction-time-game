@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="gamestyle.css" />
+    <title>Game</title>
+  </head>
+  <body>
+    <div id="ui">
+      <div class="metaContainer">
+        <div class="scoreContainer">
+          <h1 id="username"></h1>
+          <h1 id="userScore">0</h1>
+        </div>
+        <div class="metaData">
+          <p>Rounds won :</p>
+          <p id="userMeta">0</p>
+        </div>
+      </div>
+
+      <div id="roundInfo">
+        <h1 id="timer">30</h1>
+        <p id="round">Round :</p>
+      </div>
+      <div class="metaContainer">
+        <div class="scoreContainer">
+          <h1>House:</h1>
+          <h1 id="houseScore">0</h1>
+        </div>
+        <div class="metaData">
+          <p>Rounds won :</p>
+          <p id="houseMeta">0</p>
+        </div>
+      </div>
+    </div>
+    <div id="gameArea">
+      <div id="target"></div>
+    </div>
+    <div id="countdown">Ready?</div>
+  </body>
+  <script src="gamescript.js"></script>
+</html>

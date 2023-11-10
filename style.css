@@ -1,0 +1,81 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: slategrey;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#intro {
+  width: 50%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  padding: 50px;
+  background-color: paleturquoise;
+  border: 5px solid white;
+  border-radius: 20px;
+}
+
+#intro > h1 {
+  font-size: 4em;
+}
+
+#intro > form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+#intro > form > input {
+  font-size: 2em;
+  padding: 20px;
+  border-radius: 10px;
+  border: none;
+  outline: 3px solid black;
+}
+
+#intro > form > button {
+  font-size: 3em;
+  padding: 10px 50px;
+  border-radius: 10px;
+  border: none;
+  outline: 3px solid black;
+}
+
+#intro > form > button:hover {
+  background-color: black;
+  outline: 3px solid white;
+  color: white;
+  cursor: pointer;
+}
+
+.gameon {
+  background-color: white;
+}
+
+.invalid {
+  outline: 3px solid red !important;
+  position: relative;
+}
+
+label {
+  display: none;
+  position: absolute;
+  color: red;
+  top: 46%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Game</title>
+  </head>
+  <body>
+    <div id="intro">
+      <h1>Reaction time game</h1>
+      <form action="./game.html">
+        <label id="invalid">Username is required</label>
+        <input
+          type="text"
+          name="username"
+          id="username"
+          placeholder="Enter your username..."
+        />
+        <select name="difficulty">
+          <option value="1">Very Easy</option>
+          <option value="2">Easy</option>
+          <option value="3" selected>Medium (default)</option>
+          <option value="4">Hard</option>
+          <option value="5">Brutal</option>
+        </select>
+        <button id="start" type="submit">Start</button>
+      </form>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
