@@ -154,3 +154,6 @@ button:hover {
   color: white;
   background: black;
 }
+p {
+  text-align: center;
+}
