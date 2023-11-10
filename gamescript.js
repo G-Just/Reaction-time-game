@@ -87,7 +87,7 @@ function endSequence() {
   if (Number(userScore.innerHTML) > Number(houseScore.innerHTML)) {
     infoText.innerHTML = `<p>${urlParams.get(
       "username"
-    )} wins!</p><br><button onClick="resetScore()">Next round</button>"`;
+    )} wins!</p><br><button onClick="resetScore()">Next round</button>`;
     userMetaScore++;
     userMetaScoreLabel.innerHTML = `${userMetaScore}`;
   }
@@ -103,7 +103,7 @@ function resetScore() {
   userScore.innerHTML = 0;
   houseScore.innerHTML = 0;
   round++;
-  roundTime = 2;
+  roundTime = 30;
   roundCount--;
   setTimeout(() => {
     countDown(round);
@@ -146,7 +146,7 @@ switch (urlParams.get("difficulty")) {
 
 let roundCount = 10;
 let oldTime = 0;
-let roundTime = 2;
+let roundTime = 30;
 function gameLoop(currentTime) {
   if (roundTime === -1) {
     return endSequence();

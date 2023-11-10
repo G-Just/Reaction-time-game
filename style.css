@@ -75,7 +75,12 @@ label {
   display: none;
   position: absolute;
   color: red;
-  top: 46%;
+  top: 42%;
   left: 50%;
   transform: translate(-50%, -20%);
+}
+
+select {
+  padding: 10px 20px;
+  font-size: 1.2em;
 }
