@@ -1,4 +1,4 @@
-sound = new Audio("../audio/switch_sound.mp3");
+sound = new Audio("./audio/switch_sound.mp3");
 sound.volume = 0.3;
 sound.play();
 const urlSearch = window.location.search;
@@ -29,19 +29,19 @@ function countDown(round) {
   infoText.innerHTML = `Round : ${round}`;
   setTimeout(() => {
     infoText.innerHTML = "3";
-    new Audio("../audio/countdown_1.mp3").play();
+    new Audio("./audio/countdown_1.mp3").play();
   }, 2000);
   setTimeout(() => {
     infoText.innerHTML = "2";
-    new Audio("../audio/countdown_2.mp3").play();
+    new Audio("./audio/countdown_2.mp3").play();
   }, 3000);
   setTimeout(() => {
     infoText.innerHTML = "1";
-    new Audio("../audio/countdown_3.mp3").play();
+    new Audio("./audio/countdown_3.mp3").play();
   }, 4000);
   setTimeout(() => {
     infoText.innerHTML = "GO!";
-    new Audio("../audio/countdown_4.mp3").play();
+    new Audio("./audio/countdown_4.mp3").play();
   }, 5000);
   setTimeout(() => {
     infoText.style.display = "none";
@@ -75,10 +75,10 @@ function score(party) {
     target.style.border = "3px solid green";
     userScore.innerHTML++;
     clicked = true;
-    new Audio("../audio/target_hit_sound.mp3").play();
+    new Audio("./audio/target_hit_sound.mp3").play();
   } else {
     houseScore.innerHTML++;
-    sound = new Audio("../audio/target_miss_sound.mp3");
+    sound = new Audio("./audio/target_miss_sound.mp3");
     sound.volume = 0.2;
     sound.play();
   }
