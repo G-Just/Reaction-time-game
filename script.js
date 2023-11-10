@@ -4,6 +4,12 @@ const username = document.getElementById("username");
 const invalidLong = document.getElementById("invalid-long");
 const invalidEmpty = document.getElementById("invalid-empty");
 
+username.addEventListener("input", () => {
+  sound = new Audio("../audio/typing_sound.mp3");
+  sound.volume = 0.1;
+  sound.play();
+});
+
 start.addEventListener("click", (event) => {
   if (!username.value) {
     username.classList.add("invalid");
