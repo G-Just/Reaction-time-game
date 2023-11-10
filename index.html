@@ -10,7 +10,8 @@
     <div id="intro">
       <h1>Reaction time game</h1>
       <form action="./game.html">
-        <label id="invalid">Username is required</label>
+        <label id="invalid-empty">Username is required</label>
+        <label id="invalid-long">Username is too long! max 9 characters</label>
         <input
           type="text"
           name="username"
@@ -18,11 +19,13 @@
           placeholder="Enter your username..."
         />
         <select name="difficulty">
-          <option value="1">Very Easy</option>
-          <option value="2">Easy</option>
-          <option value="3" selected>Medium (default)</option>
-          <option value="4">Hard</option>
-          <option value="5">Brutal</option>
+          <option style="background-color: lightgreen" value="1">Very Easy</option>
+          <option style="background-color: green" value="2">Easy</option>
+          <option style="background-color: yellow" value="3" selected>
+            Medium (default)
+          </option>
+          <option style="background-color: orange" value="4">Hard</option>
+          <option style="background-color: lightcoral" value="5">Brutal</option>
         </select>
         <button id="start" type="submit">Start</button>
       </form>

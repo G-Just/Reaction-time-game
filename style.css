@@ -62,10 +62,6 @@ body {
   cursor: pointer;
 }
 
-.gameon {
-  background-color: white;
-}
-
 .invalid {
   outline: 3px solid red !important;
   position: relative;

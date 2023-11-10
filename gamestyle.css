@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
@@ -5,6 +9,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: start;
+  overflow: hidden;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 #gameArea {
@@ -15,11 +24,11 @@ body {
 #ui {
   background-color: slategray;
   width: 100%;
+  padding: 20px 50px 0 50px;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   border-bottom: 5px solid black;
-  padding: 20px 0 0 0;
   user-select: none;
 }
 
@@ -55,6 +64,10 @@ body {
 }
 
 .scoreContainer {
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  overflow-y: hidden;
   display: flex;
   gap: 10px;
   background-color: white;
@@ -62,6 +75,10 @@ body {
   border-radius: 30px;
   padding: 0 30px;
   margin: 0;
+}
+
+.scoreContainer::-webkit-scrollbar {
+  display: none;
 }
 
 label {
