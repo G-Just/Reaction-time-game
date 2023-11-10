@@ -73,11 +73,11 @@ function score(party) {
   }
   if (party === "user") {
     target.style.border = "3px solid green";
-    userScore.innerHTML = Number(userScore.innerHTML) + 1;
+    userScore.innerHTML++;
     clicked = true;
     new Audio("../audio/target_hit_sound.mp3").play();
   } else {
-    houseScore.innerHTML = Number(houseScore.innerHTML) + 1;
+    houseScore.innerHTML++;
     sound = new Audio("../audio/target_miss_sound.mp3");
     sound.volume = 0.2;
     sound.play();
