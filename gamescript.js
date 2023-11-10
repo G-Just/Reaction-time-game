@@ -53,6 +53,7 @@ function random(min, max) {
 
 function moveTarget() {
   paused = false;
+  target.style.border = "3px solid black";
   target.style.display = "block";
   target.style.left = `${random(100, gameArea.clientWidth - 150)}px`;
   target.style.top = `${random(gameArea.offsetTop + 30, gameArea.clientHeight - 30)}px`;
@@ -64,6 +65,7 @@ function score(party) {
     return;
   }
   if (party === "user") {
+    target.style.border = "3px solid green";
     userScore.innerHTML = Number(userScore.innerHTML) + 1;
     clicked = true;
   } else {
