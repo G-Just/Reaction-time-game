@@ -4,20 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/startMenu.css" />
+    <link rel="stylesheet" href="./styles/responsiveMenu.css" />
     <title>Game</title>
   </head>
   <body>
     <div id="intro">
       <h1>Reaction time game</h1>
       <form action="./game.html">
-        <label id="invalid-empty">Username is required</label>
-        <label id="invalid-long">Username is too long! max 9 characters</label>
-        <input
-          type="text"
-          name="username"
-          id="username"
-          placeholder="Enter your username..."
-        />
+        <div id="inputBox">
+          <label id="invalid-empty">Username is required</label>
+          <label id="invalid-long">Username is too long! max 9 characters</label>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Enter your username..."
+          />
+        </div>
         <select name="difficulty">
           <option style="background-color: lightgreen" value="1">Very Easy</option>
           <option style="background-color: green" value="2">Easy</option>

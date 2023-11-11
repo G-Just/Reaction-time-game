@@ -16,19 +16,21 @@ body {
 
 #intro {
   width: 50%;
-  height: 60%;
+  height: 65%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: start;
-  padding: 50px;
+  justify-content: center;
+  padding: 20px;
   background-color: paleturquoise;
   border: 5px solid white;
   border-radius: 20px;
+  gap: 5%;
 }
 
 #intro > h1 {
   font-size: 4em;
+  margin: 0;
 }
 
 #intro > form {
@@ -39,7 +41,7 @@ body {
   gap: 30px;
 }
 
-#intro > form > input {
+#inputBox > input {
   font-size: 2em;
   padding: 20px;
   border-radius: 10px;
@@ -49,7 +51,7 @@ body {
 
 #intro > form > button {
   font-size: 3em;
-  padding: 10px 50px;
+  padding: 10px 70px;
   border-radius: 10px;
   border: none;
   outline: 3px solid black;
@@ -67,13 +69,18 @@ body {
   position: relative;
 }
 
-label {
+#inputBox {
+  position: relative;
+}
+
+#inputBox > label {
   display: none;
   position: absolute;
   color: red;
-  top: 42%;
+  top: -25px;
   left: 50%;
-  transform: translate(-50%, -20%);
+  transform: translate(-50%);
+  text-wrap: nowrap;
 }
 
 select {

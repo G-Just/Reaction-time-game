@@ -1,0 +1,30 @@
+@media (max-width: 768px) {
+  #ui {
+    padding: 10px 5px;
+    padding-bottom: 0;
+  }
+  #countdown {
+    font-size: 3em;
+  }
+}
+
+@media (max-width: 425px) {
+  #username,
+  #userhouse {
+    display: none;
+  }
+  .scoreContainer {
+    width: 100px;
+  }
+  .metaData > p:first-child {
+    display: none;
+  }
+  button {
+    width: 300px;
+  }
+  #countdown {
+    width: 100%;
+    text-wrap: nowrap;
+    font-size: 2em;
+  }
+}

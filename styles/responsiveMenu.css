@@ -1,0 +1,105 @@
+@media (max-width: 1024px) {
+  #intro {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1440px) {
+  #intro {
+    width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  #intro > h1 {
+    font-size: 3em;
+  }
+  #inputBox > input {
+    font-size: 1.5em;
+    padding: 15px 30px;
+    border-radius: 10px;
+    border: none;
+    outline: 3px solid black;
+  }
+}
+
+@media (max-width: 425px) {
+  #intro {
+    width: 95%;
+  }
+  #intro > h1 {
+    font-size: 2.3em;
+  }
+  #inputBox > input {
+    font-size: 1.4em;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: 3px solid black;
+  }
+  select {
+    padding: 10px 20px;
+    font-size: 1.1em;
+  }
+  #intro > form > button {
+    font-size: 1.5em;
+    padding: 10px 70px;
+    border-radius: 10px;
+    border: none;
+    outline: 3px solid black;
+  }
+}
+
+@media (max-width: 375px) {
+  #intro {
+    width: 95%;
+  }
+  #intro > h1 {
+    font-size: 2em;
+  }
+  #inputBox > input {
+    font-size: 1.3em;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: 3px solid black;
+  }
+  select {
+    padding: 10px 20px;
+    font-size: 1em;
+  }
+  #intro > form > button {
+    font-size: 1.5em;
+    padding: 10px 70px;
+    border-radius: 10px;
+    border: none;
+    outline: 3px solid black;
+  }
+}
+
+@media (max-width: 320px) {
+  #intro {
+    width: 95%;
+  }
+  #intro > h1 {
+    font-size: 1.6em;
+  }
+  #inputBox > input {
+    font-size: 1em;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: 3px solid black;
+  }
+  select {
+    padding: 10px 20px;
+    font-size: 1em;
+  }
+  #intro > form > button {
+    font-size: 1.5em;
+    padding: 10px 70px;
+    border-radius: 10px;
+    border: none;
+    outline: 3px solid black;
+  }
+}

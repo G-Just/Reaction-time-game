@@ -24,7 +24,8 @@ body::-webkit-scrollbar {
 #ui {
   background-color: slategray;
   width: 100%;
-  padding: 20px 50px 0 50px;
+  padding: 20px 50px;
+  padding-bottom: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -37,10 +38,14 @@ body::-webkit-scrollbar {
   margin: 0;
   text-align: center;
   width: 100px;
+  height: 90px;
   padding: 10px 0;
-  outline: 5px solid black;
+  border: 5px solid black;
   border-radius: 10px;
   font-size: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #target {
@@ -61,6 +66,10 @@ body::-webkit-scrollbar {
   left: 50%;
   transform: translate(-50%, -50%);
   user-select: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .scoreContainer {
@@ -90,10 +99,13 @@ label {
 }
 
 #round {
-  text-align: center;
-  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 1.2em;
   font-weight: bold;
+  gap: 5px;
+  margin: 5px 0;
 }
 
 #roundInfo {

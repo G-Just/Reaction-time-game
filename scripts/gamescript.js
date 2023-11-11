@@ -25,7 +25,7 @@ let round = 1;
 function countDown(round) {
   document.getElementById("round").innerHTML = `Round : ${round}`;
   paused = true;
-  infoText.style.display = "block";
+  infoText.style.display = "flex";
   infoText.innerHTML = `Round : ${round}`;
   setTimeout(() => {
     infoText.innerHTML = "3";
@@ -109,7 +109,7 @@ function endSequence() {
     houseMetaScore++;
     houseMetaScoreLabel.innerHTML = `${houseMetaScore}`;
   }
-  infoText.style.display = "block";
+  infoText.style.display = "flex";
 }
 
 function resetScore() {
@@ -135,7 +135,7 @@ function gameOver() {
     infoText.innerHTML =
       "House is the game winner! :( <br><label>The house always wins<label><br><a href='./index.html'>Go back</a>";
   }
-  infoText.style.display = "block";
+  infoText.style.display = "flex";
 }
 
 let delta;
