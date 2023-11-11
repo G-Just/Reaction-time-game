@@ -13,6 +13,7 @@ username.addEventListener("input", () => {
 start.addEventListener("click", (event) => {
   if (!username.value) {
     username.classList.add("invalid");
+    invalidLong.style.display = "none";
     invalidEmpty.style.display = "block";
     event.preventDefault();
   } else {
@@ -22,6 +23,7 @@ start.addEventListener("click", (event) => {
       invalidLong.style.display = "none";
     } else {
       invalidLong.style.display = "block";
+      invalidEmpty.style.display = "none";
       username.classList.add("invalid");
       event.preventDefault();
     }
