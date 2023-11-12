@@ -182,5 +182,14 @@ function gameLoop(currentTime) {
 }
 
 countDown(round);
-target.addEventListener("click", () => score("user"));
-gameArea.addEventListener("click", () => score("house"));
+
+target.addEventListener("click", (e) => {
+  e.stopPropagation();
+  score("user");
+});
+gameArea.addEventListener("click", (e) => score("house"));
+
+submit_name.addEventListener("click", (e) => {
+  e.stopPropagation();
+  init();
+});
