@@ -74,6 +74,7 @@ body::-webkit-scrollbar {
 
 #countdown > p {
   margin: 0;
+  text-wrap: nowrap;
 }
 
 #countdown > label {
@@ -106,6 +107,10 @@ label {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 0.2em;
+}
+
+#countdown > label {
+  top: 80%;
 }
 
 #round {
@@ -146,7 +151,7 @@ a {
   text-decoration: none;
   color: black;
   cursor: pointer;
-  font-size: 25em;
+  font-size: 10em;
   width: 500px;
   border-radius: 20px;
   border: 5px solid black;
