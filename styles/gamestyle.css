@@ -72,6 +72,16 @@ body::-webkit-scrollbar {
   justify-content: center;
 }
 
+#countdown > p {
+  margin: 0;
+}
+
+#countdown > label {
+  text-wrap: nowrap;
+  font-weight: bold;
+  font-size: 0.5em;
+}
+
 .scoreContainer {
   align-items: center;
   justify-content: center;

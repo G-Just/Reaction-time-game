@@ -13,6 +13,9 @@ const timer = document.getElementById("timer");
 const infoText = document.getElementById("countdown");
 let clicked = false;
 let paused = false;
+let reactionTimeStart = 0;
+let reactionTimeEnd = 0;
+let reactionTime = 0;
 
 let userMetaScore = 0;
 let houseMetaScore = 0;
@@ -23,6 +26,7 @@ function randomColor() {
 
 let round = 1;
 function countDown(round) {
+  reactionTime = 0;
   document.getElementById("round").innerHTML = `Round : ${round}`;
   paused = true;
   infoText.style.display = "flex";
@@ -66,6 +70,7 @@ function moveTarget() {
     gameArea.clientHeight + gameArea.offsetTop - 50
   )}px`;
   randomColor();
+  reactionTimeStart = performance.now();
 }
 
 function score(party) {
@@ -73,6 +78,8 @@ function score(party) {
     return;
   }
   if (party === "user") {
+    reactionTimeEnd = performance.now();
+    reactionTime += reactionTimeStart - reactionTimeEnd;
     target.style.border = "3px solid green";
     userScore.innerHTML++;
     clicked = true;
@@ -101,7 +108,9 @@ function endSequence() {
   if (Number(userScore.innerHTML) > Number(houseScore.innerHTML)) {
     infoText.innerHTML = `<p>${urlParams.get(
       "username"
-    )} wins!</p><br><button onClick="resetScore()">Next round</button>`;
+    )} wins!</p><label>Average reaction time : ${Math.abs(reactionTime / 30).toFixed(
+      0
+    )}ms</label><br><button onClick="resetScore()">Next round</button>`;
     userMetaScore++;
     userMetaScoreLabel.innerHTML = `${userMetaScore}`;
   }
@@ -188,8 +197,3 @@ target.addEventListener("click", (e) => {
   score("user");
 });
 gameArea.addEventListener("click", (e) => score("house"));
-
-submit_name.addEventListener("click", (e) => {
-  e.stopPropagation();
-  init();
-});
