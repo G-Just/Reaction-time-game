@@ -60,7 +60,6 @@ body::-webkit-scrollbar {
 #countdown {
   display: none;
   position: absolute;
-  font-size: 4em;
   font-weight: bolder;
   top: 50%;
   left: 50%;
@@ -73,14 +72,21 @@ body::-webkit-scrollbar {
 }
 
 #countdown > p {
+  font-size: 7em;
   margin: 0;
+  margin-bottom: 20px;
   text-wrap: nowrap;
 }
 
 #countdown > label {
   text-wrap: nowrap;
-  font-weight: bold;
-  font-size: 0.5em;
+  font-weight: 400;
+  font-size: 2em;
+}
+
+#countdown > button {
+  font-size: 3em;
+  padding: 20px 100px;
 }
 
 .scoreContainer {
@@ -107,10 +113,6 @@ label {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 0.2em;
-}
-
-#countdown > label {
-  top: 80%;
 }
 
 #round {
@@ -170,11 +172,10 @@ button {
   text-decoration: none;
   color: black;
   cursor: pointer;
-  font-size: 1em;
   border-radius: 20px;
   border: 5px solid black;
   margin: 0;
-  padding: 20px;
+  padding: 20px 50px;
 }
 
 button:hover {

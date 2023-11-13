@@ -1,14 +1,19 @@
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   #ui {
     padding: 10px 5px;
     padding-bottom: 0;
   }
-  #countdown {
-    font-size: 3em;
+  #countdown > p {
+    font-size: 6em;
   }
-  a {
-    font-size: 5em;
-    width: 300px;
+  #countdown > button {
+    font-size: 3em;
+    text-wrap: nowrap;
+    padding: 20px 50px;
+  }
+  #countdown > label {
+    font-size: 2em;
+    text-wrap: nowrap;
   }
 }
 
@@ -29,15 +34,32 @@
   #countdown {
     width: 100%;
     text-wrap: nowrap;
-    font-size: 2em;
   }
-  p {
-    font-size: 0.8em;
+  #countdown > p {
+    font-size: 4em;
+  }
+  #countdown > button {
+    font-size: 2em;
+    text-wrap: nowrap;
+    padding: 20px 20px;
+  }
+  #countdown > label {
+    font-size: 1.5em;
+    text-wrap: nowrap;
   }
 }
 
 @media (max-width: 370px) {
-  p {
-    font-size: 0.6em;
+  #countdown > p {
+    font-size: 3.5em;
+  }
+  #countdown > button {
+    font-size: 2em;
+    text-wrap: nowrap;
+    padding: 20px 10px;
+  }
+  #countdown > label {
+    font-size: 1.2em;
+    text-wrap: nowrap;
   }
 }

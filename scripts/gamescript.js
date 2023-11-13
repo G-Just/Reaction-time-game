@@ -30,21 +30,21 @@ function countDown(round) {
   document.getElementById("round").innerHTML = `Round : ${round}`;
   paused = true;
   infoText.style.display = "flex";
-  infoText.innerHTML = `Round : ${round}`;
+  infoText.innerHTML = `<p>Round : ${round}<p>`;
   setTimeout(() => {
-    infoText.innerHTML = "3";
+    infoText.innerHTML = "<p>3</p>";
     new Audio("./audio/countdown_1.mp3").play();
   }, 2000);
   setTimeout(() => {
-    infoText.innerHTML = "2";
+    infoText.innerHTML = "<p>2</p>";
     new Audio("./audio/countdown_2.mp3").play();
   }, 3000);
   setTimeout(() => {
-    infoText.innerHTML = "1";
+    infoText.innerHTML = "<p>1</p>";
     new Audio("./audio/countdown_3.mp3").play();
   }, 4000);
   setTimeout(() => {
-    infoText.innerHTML = "GO!";
+    infoText.innerHTML = "<p>GO!</p>";
     new Audio("./audio/countdown_4.mp3").play();
   }, 5000);
   setTimeout(() => {
@@ -98,26 +98,25 @@ houseMetaScoreLabel = document.getElementById("houseMeta");
 function endSequence() {
   paused = true;
   target.style.display = "none";
-  if (roundCount === 0) {
-    return gameOver();
-  }
   if (Number(userScore.innerHTML) === Number(houseScore.innerHTML)) {
-    infoText.innerHTML =
-      "<p>Tie!</p><br><button onClick='resetScore()'>Next round</button>";
+    infoText.innerHTML = "<p>Tie!</p><button onClick='resetScore()'>Next round</button>";
   }
   if (Number(userScore.innerHTML) > Number(houseScore.innerHTML)) {
     infoText.innerHTML = `<p>${urlParams.get(
       "username"
-    )} wins!</p><label>Average reaction time : ${Math.abs(reactionTime / 30).toFixed(
-      0
-    )}ms</label><br><button onClick="resetScore()">Next round</button>`;
+    )} wins!</p><label>Average reaction time : ${Math.abs(
+      reactionTime / roundCountTotal
+    ).toFixed(0)}ms</label><button onClick="resetScore()">Next round</button>`;
     userMetaScore++;
     userMetaScoreLabel.innerHTML = `${userMetaScore}`;
   }
   if (Number(userScore.innerHTML) < Number(houseScore.innerHTML)) {
-    infoText.innerHTML = `<p>House wins!</p><br><button onClick="resetScore()">Next round</button>`;
+    infoText.innerHTML = `<p>House wins!</p><button onClick="resetScore()">Next round</button>`;
     houseMetaScore++;
     houseMetaScoreLabel.innerHTML = `${houseMetaScore}`;
+  }
+  if (roundCount === 0) {
+    return gameOver();
   }
   infoText.style.display = "flex";
 }
@@ -135,15 +134,15 @@ function resetScore() {
 
 function gameOver() {
   if (Number(userMetaScore) === Number(houseMetaScore)) {
-    infoText.innerHTML = `Game ended in a tie!`;
-  }
-  if (Number(userMetaScore) > Number(houseMetaScore)) {
-    infoText.innerHTML = `${urlParams.get(
-      "username"
-    )} is the game winner! :) <br><label>Winner winner chicken dinner<label><br><a href='./index.html'>Go back</a>";`;
+    infoText.innerHTML = `<p style="font-size:3em;text-wrap:wrap !important;">Game ended in a tie!<p>`;
   } else {
-    infoText.innerHTML =
-      "House is the game winner! :( <br><label>The house always wins<label><br><a href='./index.html'>Go back</a>";
+    if (Number(userMetaScore) > Number(houseMetaScore)) {
+      infoText.innerHTML = `<p style="font-size:3em;text-wrap:wrap !important;">${urlParams.get(
+        "username"
+      )} is the game winner! :)</p><label>Winner winner chicken dinner</label><a style="font-size:2em;margin-top:50px;" href='./index.html'>Go back</a>`;
+    } else {
+      infoText.innerHTML = `<p style="font-size:3em;text-wrap:wrap !important;" >House is the game winner! :( </p><label>The house always wins<label><a href='./index.html'>Go back</a>`;
+    }
   }
   infoText.style.display = "flex";
 }
@@ -170,6 +169,7 @@ switch (urlParams.get("difficulty")) {
 let roundCount = 10;
 let oldTime = 0;
 let roundTime = 30;
+let roundCountTotal = Number([roundTime].join(""));
 function gameLoop(currentTime) {
   if (roundTime === -1) {
     return endSequence();
